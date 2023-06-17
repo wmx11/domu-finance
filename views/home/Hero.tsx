@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import HeroImage from '../../assets/hero_image.jpg';
-import { animate } from 'motion';
+import { animate, spring, glide } from 'motion';
 
 export default function HeroView() {
   const heroRef = useRef<HTMLImageElement>(null);
@@ -12,16 +12,16 @@ export default function HeroView() {
     animate(
       heroRef.current as HTMLImageElement,
       {
-        transform: ['translateY(-1000px)', 'translateY(0px)'],
+        transform: 'translateY(0px)',
       },
-      { duration: 0.7, easing: 'ease-in-out' }
+      { easing: glide() }
     );
   }, [heroRef]);
 
   return (
     <section className="min-h-screen bg-primary flex">
       <div className="flex-1 flex items-center justify-center">
-        <div className="text-white">
+        <div className="text-white" id="test">
           <h1 className="text-7xl font-bold mb-6">Main Value Proposition</h1>
           <h2 className="text-3xl mb-6">Secondary value proposition.</h2>
           <button>CTA</button>
