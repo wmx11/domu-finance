@@ -1,38 +1,22 @@
-'use client';
-
+import Heading from '@/components/Heading';
 import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
 import HeroImage from '../../assets/hero_image.jpg';
-import { animate, spring, glide } from 'motion';
+import SubHeading from '@/components/SubHeading';
 
 export default function HeroView() {
-  const heroRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    animate(
-      heroRef.current as HTMLImageElement,
-      {
-        transform: 'translateY(0px)',
-      },
-      { easing: glide() }
-    );
-  }, [heroRef]);
-
   return (
     <section className="min-h-screen bg-primary flex">
       <div className="flex-1 flex items-center justify-center">
-        <div className="text-white" id="test">
-          <h1 className="text-7xl font-bold mb-6">Main Value Proposition</h1>
-          <h2 className="text-3xl mb-6">Secondary value proposition.</h2>
-          <button>CTA</button>
+        <div className="text-white">
+          <Heading className="text-7xl">Bridge the real estate gap</Heading>
+          <SubHeading>Secondary value proposition.</SubHeading>
         </div>
       </div>
       <div className="basis-[40%] relative ">
         <Image
           src={HeroImage}
-          ref={heroRef}
           alt="Real estate hero image"
-          className="absolute inset-0 w-full h-full object-cover translate-y-[-1000px]"
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
     </section>

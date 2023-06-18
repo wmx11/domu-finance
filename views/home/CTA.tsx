@@ -1,14 +1,19 @@
+import Container from '@/components/Container';
+import Heading from '@/components/Heading';
+import Section from '@/components/Section';
 import React from 'react';
 
 export default function CTAView() {
   return (
-    <section className="py-24 container mx-auto">
-      <div className="bg-primary flex items-center justify-center p-24 ">
-        <div className="text-white text-center">
-          <h1 className="text-6xl font-bold mb-8">Final CTA Proposition</h1>
-          <button>CTA</button>
+    <Section id="cta">
+      <Container>
+        <div className="bg-primary flex items-center justify-center p-24 ">
+          <div className="text-white text-center space-y-8">
+            <Heading>Final CTA Proposition</Heading>
+            <button>CTA</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
