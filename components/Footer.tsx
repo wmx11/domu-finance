@@ -3,7 +3,7 @@ import Container from './Container';
 
 export default function Footer() {
   return (
-    <footer className="min-h-[320px] bg-black text-white ">
+    <footer className="min-h-[420px] bg-black text-white ">
       <Container>
         <div className="flex flex-col md:flex-row md:justify-between p-12 md:p-0 md:pt-12 space-y-12 md:space-y-0 mb-8">
           <div className="flex-1">
