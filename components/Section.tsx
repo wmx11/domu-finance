@@ -7,7 +7,7 @@ const Section: FC<PropsWithChildren & HTMLAttributes<HTMLBaseElement>> = ({
   id,
 }) => {
   return (
-    <section className={twMerge('py-12', className)} id={id}>
+    <section className={twMerge('py-24', className)} id={id}>
       {children}
     </section>
   );

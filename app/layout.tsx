@@ -1,9 +1,8 @@
 import Footer from '@/components/Footer';
 import './globals.css';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Quicksand } from 'next/font/google';
 
-// const inter = Inter({ subsets: ['latin'] });
-const playfair = Playfair_Display({ subsets: ['latin'] });
+const quicksand = Quicksand({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>
+      <body className={quicksand.className}>
         {children}
         <Footer />
       </body>

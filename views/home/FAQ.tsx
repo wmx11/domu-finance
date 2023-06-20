@@ -15,7 +15,7 @@ export default function FAQView() {
     <Section id="faq">
       <Container className="space-y-12">
         <div>
-          <Heading>FAQ</Heading>
+          <Heading>Frequently Asked Questions</Heading>
           <SubHeading>Let's answer some of those questions</SubHeading>
         </div>
         <div>
