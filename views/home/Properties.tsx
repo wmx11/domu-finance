@@ -1,26 +1,25 @@
 import Container from '@/components/Container';
+import Heading from '@/components/Heading';
 import Section from '@/components/Section';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
 } from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
 import Image from 'next/image';
-import React from 'react';
 import PropertyOne from '../../assets/property_1.jpg';
 import PropertyTwo from '../../assets/property_2.jpg';
 import PropertyThree from '../../assets/property_3.jpg';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import Heading from '@/components/Heading';
 
 const Properties = () => {
   return (
     <Section id="properties">
       <Container>
         <div className="mb-12">
-          <Heading>Explore Our Properties</Heading>
+          <Heading className="animate--fly-in">Explore Our Properties</Heading>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           <Card className="flex-1 md:basis-[33.3%]">

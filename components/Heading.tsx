@@ -6,7 +6,7 @@ const Heading: FC<PropsWithChildren & HTMLAttributes<HTMLHeadingElement>> = ({
   className,
 }) => {
   return (
-    <h1 className={twMerge('text-6xl font-bold mb-8', className)}>{children}</h1>
+    <h1 className={twMerge('text-5xl md:text-6xl font-bold mb-8', className)}>{children}</h1>
   );
 };
 

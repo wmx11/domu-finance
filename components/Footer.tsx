@@ -5,19 +5,14 @@ export default function Footer() {
   return (
     <footer className="min-h-[420px] bg-black text-white ">
       <Container>
-        <div className="flex flex-col md:flex-row md:justify-between p-12 md:p-0 md:pt-12 space-y-12 md:space-y-0 mb-8">
+        <div className="flex flex-col md:flex-row md:justify-between py-8 space-y-12 md:space-y-0">
           <div className="flex-1">
             <div className="mb-4">Domu Finance Logo</div>
-            <div className="space-y-2">
-              <div className="mb-4 font-bold text-xl">Social</div>
-              <div>Twitter</div>
-              <div>Discord</div>
-            </div>
           </div>
           <div className="flex-1">
             <div className="mb-4 font-bold text-xl">Navigation</div>
             <ul className="space-y-2">
-              {['Home', 'About', 'FAQ', 'Benefits'].map((item, index) => (
+              {['Home', 'About', 'FAQ', 'Benefits', 'Whitepaper'].map((item, index) => (
                 <li key={`navigation_${index}`}>
                   <a href="#">{item}</a>
                 </li>
@@ -39,8 +34,18 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          <div className="flex-1">
+            <div className="mb-4 font-bold text-xl">Social Media</div>
+            <ul className="space-y-2">
+              {['Discord', 'Twitter'].map((item, index) => (
+                <li key={`social_${index}`}>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="space-y-8">
+        <div className="space-y-8 py-8">
           <hr className="border-zinc-500" />
           <div className="mb-8">
             <p className="text-sm">

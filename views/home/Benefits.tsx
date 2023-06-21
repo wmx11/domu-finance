@@ -6,7 +6,7 @@ import Image from 'next/image';
 import BenefitsImage from '../../assets/benefits_image.jpg';
 
 import { FC } from 'react';
-import { BsHousesFill, BsFillBuildingsFill } from 'react-icons/bs';
+import { BsFillBuildingsFill, BsHousesFill } from 'react-icons/bs';
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { RxMargin } from 'react-icons/rx';
 import { TbBarrierBlockOff, TbPigMoney } from 'react-icons/tb';
@@ -64,11 +64,11 @@ const BenefitBlock: FC<ContentType> = ({
   Icon,
   reverse = false,
 }) => (
-  <div>
+  <div className="animate--fly-in">
     <div
       className={twMerge(
         'flex gap-4 items-center mb-4 border-b pb-4',
-        reverse ? 'flex-row-reverse' : 'flex-row'
+        reverse ? 'md:flex-row-reverse' : 'flex-row'
       )}
     >
       <div className="bg-sky-500 rounded-full p-5 text-white text-xl">
@@ -85,20 +85,20 @@ export default function BenefitsView() {
     <Section id="benefits">
       <Container>
         <div className="mb-12">
-          <Heading>Tangible & Proven</Heading>
-          <SubHeading>
+          <Heading className="animate--fly-in">Tangible & Proven</Heading>
+          <SubHeading className="animate--fly-in">
             No longer do you have to worry about crazy volatility and made-up
             utility
           </SubHeading>
         </div>
 
-        <div className="flex gap-6 min-h-[550px]">
+        <div className="flex flex-col md:flex-row gap-6">
           <div className="basis-[33.3%] space-y-12">
             {content?.slice(0, content.length / 2).map((item, index) => (
               <BenefitBlock {...item} key={`benefits_1_${index}`} />
             ))}
           </div>
-          <div className="basis-[33.3%] relative">
+          <div className="h-[320px] md:h-auto md:basis-[33.3%] relative">
             <Image
               src={BenefitsImage}
               alt="Real estate about image"
