@@ -14,7 +14,7 @@ const Logo = () => {
             x="0px"
             y="0px"
             viewBox="0 0 770 800"
-            className="domu-logo fixed top-[calc(0px+200px)] h-[200px] w-[200px] z-[-1] opacity-10 group-hover:opacity-100 transition-opacity"
+            className="animate--fly-in domu-logo h-[200px] w-[200px]"
           >
             <g>
               <path
@@ -331,6 +331,7 @@ const Logo = () => {
 		c6.2,0,12.1,0,18.3,0C362.2,728.2,359.3,720.6,356.1,712.2z"
               />
               <path
+                className="cavity"
                 pathLength="1"
                 d="M356.1,712.2c3.3,8.5,6.2,16.1,9.2,23.9c-6.2,0-12.1,0-18.3,0C349.9,728.2,352.8,720.6,356.1,712.2z"
               />

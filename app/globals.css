@@ -92,8 +92,12 @@
 }
 
 svg.domu-logo path {
-  stroke: hsl(var(--primary));
+  fill: hsl(var(--primary));
   stroke-width: 10;
   stroke-dashoffset: 0;
-  fill: none;
+  /* fill: none; */
+}
+
+svg.domu-logo path.cavity {
+  fill: #fff;
 }
