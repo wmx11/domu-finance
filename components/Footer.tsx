@@ -21,13 +21,16 @@ export default function Footer() {
           <div className="flex-1">
             <div className="mb-4 font-bold text-xl">Navigation</div>
             <ul className="space-y-2">
-              {['Home', 'About', 'FAQ', 'Benefits', 'Whitepaper'].map(
-                (item, index) => (
-                  <li key={`navigation_${index}`}>
-                    <a href="#">{item}</a>
-                  </li>
-                )
-              )}
+              {[
+                { label: 'About', href: '#about' },
+                { label: 'FAQ', href: '#faq' },
+                { label: 'Benefits', href: '#benefits' },
+                { label: 'Whitepaper', href: 'https://docs.domu.finance' },
+              ].map((item, index) => (
+                <li key={`navigation_${index}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="flex-1">
@@ -48,9 +51,14 @@ export default function Footer() {
           <div className="flex-1">
             <div className="mb-4 font-bold text-xl">Social Media</div>
             <ul className="space-y-2">
-              {['Discord', 'Twitter'].map((item, index) => (
+              {[
+                { label: 'Discord', href: 'https://discord.gg/RBjx5wQMyt' },
+                { label: 'Twitter', href: 'https://twitter.com/DomuFinance' },
+              ].map((item, index) => (
                 <li key={`social_${index}`}>
-                  <a href="#">{item}</a>
+                  <a href={item.href} target="_blank">
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>

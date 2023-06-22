@@ -80,6 +80,15 @@
   }
 }
 
+a {
+  transition: opacity 0.2s ease-in;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 .pattern {
   background-color: transparent;
   opacity: 0.1;
@@ -95,7 +104,6 @@ svg.domu-logo path {
   fill: hsl(var(--primary));
   stroke-width: 10;
   stroke-dashoffset: 0;
-  /* fill: none; */
 }
 
 svg.domu-logo path.cavity {
