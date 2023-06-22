@@ -21,8 +21,8 @@ const Properties = () => {
         <div className="mb-12">
           <Heading className="animate--fly-in">Explore Our Properties</Heading>
         </div>
-        <div className="flex flex-col md:flex-row gap-4">
-          <Card className="flex-1 md:basis-[33.3%]">
+        <div className="flex flex-col md:flex-row gap-4 flex-wrap">
+          <Card className="flex-1 md:basis-[calc(33.3%-16px)]">
             <CardHeader>
               <Image
                 src={PropertyOne}
@@ -55,7 +55,7 @@ const Properties = () => {
               </Button>
             </CardFooter>
           </Card>
-          <Card className="flex-1 md:basis-[33.3%]">
+          <Card className="flex-1 md:basis-[calc(33.3%-16px)]">
             <CardHeader>
               <Image
                 src={PropertyTwo}
@@ -88,7 +88,7 @@ const Properties = () => {
               </Button>
             </CardFooter>
           </Card>
-          <Card className="flex-1 md:basis-[33.3%]">
+          <Card className="flex-1 md:basis-[calc(33.3%-16px)]">
             <CardHeader>
               <Image
                 src={PropertyThree}

@@ -90,3 +90,10 @@
 .animate--fly-in {
   opacity: 0;
 }
+
+svg.domu-logo path {
+  stroke: hsl(var(--primary));
+  stroke-width: 10;
+  stroke-dashoffset: 0;
+  fill: none;
+}

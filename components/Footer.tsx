@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from './Container';
+import DomuFinanceLogo from '@/assets/domu_logo_white.png';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,16 +9,25 @@ export default function Footer() {
       <Container>
         <div className="flex flex-col md:flex-row md:justify-between py-8 space-y-12 md:space-y-0">
           <div className="flex-1">
-            <div className="mb-4">Domu Finance Logo</div>
+            <a href="/">
+              <div className="mb-4 flex gap-4 flex-col md:flex-row items-center">
+                <div className="h-[50px] w-[50px]">
+                  <Image src={DomuFinanceLogo} alt="Domu Logo" />
+                </div>
+                <div className="text-2xl font-bold">Domu Finance</div>
+              </div>
+            </a>
           </div>
           <div className="flex-1">
             <div className="mb-4 font-bold text-xl">Navigation</div>
             <ul className="space-y-2">
-              {['Home', 'About', 'FAQ', 'Benefits', 'Whitepaper'].map((item, index) => (
-                <li key={`navigation_${index}`}>
-                  <a href="#">{item}</a>
-                </li>
-              ))}
+              {['Home', 'About', 'FAQ', 'Benefits', 'Whitepaper'].map(
+                (item, index) => (
+                  <li key={`navigation_${index}`}>
+                    <a href="#">{item}</a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
           <div className="flex-1">

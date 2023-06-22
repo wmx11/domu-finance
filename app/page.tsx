@@ -7,7 +7,7 @@ import FAQView from '@/views/home/FAQ';
 import HeroView from '@/views/home/Hero';
 import Logo from '@/views/home/Logo';
 import Properties from '@/views/home/Properties';
-import { animate, inView, stagger } from 'motion';
+import { animate, inView, stagger, scroll } from 'motion';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -30,6 +30,12 @@ export default function Home() {
       {
         margin: '-25%',
       }
+    );
+
+    scroll(
+      animate('svg.domu-logo', {
+        strokeDasharray: ['0,1', '1,1'],
+      })
     );
   }, []);
 

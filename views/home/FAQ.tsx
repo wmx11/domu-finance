@@ -73,7 +73,7 @@ export default function FAQView() {
                 value={`item_${index}`}
                 key={`faq_question_${index}`}
               >
-                <AccordionTrigger className="font-bold text-lg">
+                <AccordionTrigger className="font-bold text-lg text-left">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-lg">
